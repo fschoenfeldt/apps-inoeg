@@ -16,18 +16,19 @@
   },
   "bugs": "https://github.com/kiebitz-oss/apps-ffm/issues",
   "engines": {
-    "node": "^14.18.1 || >=16.0.0",
-    "yarn": ">=1.22.0",
-    "npm": "please-use-yarn"
+    "node": "^14.18.1 || >=16.0.0"
   },
   "scripts": {
     "dev": "start-storybook -p 9000",
     "build:sb": "build-storybook --output-dir dist",
-    "clean": "rimraf --no-glob ./dist .tsbuildinfo",
+    "clean": "rm -rf ./dist",
     "test": "jest --passWithNoTests",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "lint:staged": "lint-staged --allow-empty",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^12.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
@@ -50,56 +51,29 @@
     "@testing-library/dom": "^8.11.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
     "@types/jest-axe": "^3.5.3",
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.8.1",
-    "@typescript-eslint/parser": "^5.8.1",
     "autoprefixer": "^10.4.1",
     "babel-loader": "^8.2.3",
     "babel-plugin-macros": "^3.1.0",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.6.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jest": "^25.3.3",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-regexp": "^1.5.1",
-    "eslint-plugin-storybook": "^0.5.5",
-    "eslint-plugin-testing-library": "^5.0.1",
     "jest": "^27.4.5",
     "jest-axe": "^5.0.1",
-    "lint-staged": "^12.1.4",
-    "next": "^12.0.7",
     "postcss": "^8.4.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-loader": "^6.2.1",
     "postcss-preset-env": "^7.1.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "rimraf": "^3.0.2",
     "storybook-addon-next-router": "^3.1.1",
     "tailwindcss": "^3.0.8",
     "typescript": "^4.5.4",
     "webpack": "^5.65.0"
-  },
-  "resolutions": {
-    "browserslist": "^4.16.5",
-    "immer": "^9.0.6",
-    "glob-parent": "^6",
-    "trim": "^1",
-    "webpack": "^5"
   },
   "browserslist": [
     "defaults",
     "not ie 11",
     "not op_mini all"
   ],
-  "lint-staged": {
-    "src/*": "yarn lint --fix"
-  },
   "lingui": {
     "locales": [
       "de",
@@ -107,53 +81,5 @@
     ],
     "sourceLocale": "de",
     "format": "po"
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "../../eslintrc.base.js",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-      "plugin:jsx-a11y/recommended"
-    ],
-    "plugins": [
-      "testing-library",
-      "storybook"
-    ],
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
-    },
-    "rules": {
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "jsx-a11y/anchor-is-valid": "off"
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/*.test.{ts,tsx}"
-        ],
-        "extends": [
-          "plugin:testing-library/react"
-        ]
-      },
-      {
-        "files": [
-          "**/*.stories.{ts,tsx,mdx}"
-        ],
-        "extends": [
-          "plugin:storybook/recommended",
-          "plugin:storybook/csf-strict"
-        ],
-        "rules": {
-          "storybook/use-storybook-testing-library": "off"
-        }
-      }
-    ]
-  },
-  "dependencies": {
-    "@types/jest": "^27.4.0"
   }
 }

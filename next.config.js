@@ -10,7 +10,7 @@ const NEXTJS_IGNORE_ESLINT = process.env.NEXTJS_IGNORE_ESLINT === "1" || false;
 const NEXTJS_IGNORE_TYPECHECK =
   process.env.NEXTJS_IGNORE_TYPECHECK === "1" || false;
 
-const isProd = process.env.NODE_ENV === "production";
+// const isProd = process.env.NODE_ENV === "production";
 
 /**
  * A way to allow CI optimization when the build done there is not used

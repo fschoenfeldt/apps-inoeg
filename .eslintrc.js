@@ -1,8 +1,14 @@
-module.exports = {
+// @ts-check
+
+/**
+ * type {import('eslint').Linter.Config}
+ * @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config}
+ */
+const config = {
   root: true,
   env: {
     node: true,
-    es6: true,
+    es2020: true,
   },
   ignorePatterns: ["**/node_modules", "**/dist", "**/build"],
   parser: "@typescript-eslint/parser",
@@ -24,19 +30,19 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:regexp/recommended",
     "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
   ],
   // By loading jest globally as a plugin
   // we can load recommended on specific code base (regular / tests) through
   // overrides.
-  plugins: ["jest", "testing-library", "storybook"],
-  globals: {
-    context: "readonly",
-    cy: "readonly",
-    assert: "readonly",
-    Cypress: "readonly",
-  },
+  plugins: ["jest", "testing-library", "storybook", "cypress"],
   rules: {
     "no-empty-function": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "@typescript-eslint/no-empty-function": [
       "error",
       { allow: ["private-constructors"] },
@@ -44,24 +50,6 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
   },
   overrides: [
-    {
-      // For performance run jest/recommended on test files, not regular code
-      files: ["**/*.test.{ts,tsx}"],
-      extends: ["plugin:jest/all", "plugin:testing-library/react"],
-      rules: {
-        "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-object-literal-type-assertion": "off",
-        "@typescript-eslint/no-empty-function": "off",
-        "jest/prefer-called-with": "off",
-      },
-    },
-    {
-      files: ["**/*.stories.{ts,tsx,mdx}"],
-      extends: ["plugin:storybook/recommended", "plugin:storybook/csf-strict"],
-      rules: {
-        "storybook/use-storybook-testing-library": "off",
-      },
-    },
     {
       files: ["*.js"],
       parser: "espree",
@@ -81,5 +69,32 @@ module.exports = {
         "import/order": "off",
       },
     },
+    {
+      // For performance run jest/recommended on test files, not regular code
+      files: ["**/*.test.{ts,tsx}"],
+      extends: ["plugin:jest/all", "plugin:testing-library/react"],
+      rules: {
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/no-object-literal-type-assertion": "off",
+        "@typescript-eslint/no-empty-function": "off",
+        "jest/prefer-called-with": "off",
+      },
+    },
+    {
+      files: ["**/*.stories.{ts,tsx,mdx}"],
+      extends: ["plugin:storybook/recommended", "plugin:storybook/csf-strict"],
+      rules: {
+        "storybook/use-storybook-testing-library": "off",
+      },
+    },
+    {
+      files: ["**/cypress/**/*.{ts,tsx}"],
+      extends: ["plugin:cypress/recommended"],
+      env: {
+        "cypress/globals": true,
+      },
+    },
   ],
 };
+
+module.exports = config;

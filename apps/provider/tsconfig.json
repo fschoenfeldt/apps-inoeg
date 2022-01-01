@@ -7,7 +7,6 @@
     "target": "es5",
     "outDir": "dist",
     "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "jsx": "preserve",
     "noEmit": true,
     "isolatedModules": true,
