@@ -28,9 +28,9 @@
     "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit",
     "i18n": "lingui",
-    "i18n:extract": "cross-env NODE_ENV=development lingui extract --clean",
+    "i18n:extract": "NODE_ENV=development lingui extract --clean",
     "i18n:compile": "lingui compile",
-    "i18n:build": "cross-env NODE_ENV=development lingui extract --clean && lingui compile"
+    "i18n:build": "NODE_ENV=development lingui extract --clean && lingui compile"
   },
   "dependencies": {
     "@carbon/icons-react": "^10.44.0",
@@ -119,7 +119,6 @@
   },
   "jest": {
     "testEnvironment": "jsdom",
-    "rootDir": "src",
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom",
       "@testing-library/jest-dom/extend-expect",

@@ -1,13 +1,12 @@
 // @ts-check
 
 /**
- * type {import('eslint').Linter.Config}
  * @type {import('@typescript-eslint/experimental-utils').TSESLint.Linter.Config}
  */
 const config = {
   root: true,
   env: {
-    node: true,
+    browser: true,
     es2020: true,
   },
   ignorePatterns: ["**/node_modules", "**/dist", "**/build"],
