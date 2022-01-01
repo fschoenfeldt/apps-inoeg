@@ -108,12 +108,6 @@
     "not ie 11",
     "not op_mini all"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint --edit HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": "eslint --fix"
   },
