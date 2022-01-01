@@ -1,14 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "@kiebitz-oss/config",
+  "display": "@kiebitz-oss/api",
   "compilerOptions": {
     "lib": ["es2020", "DOM", "DOM.Iterable"],
-    "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "outDir": "dist",
     "baseUrl": "src"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["assets.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["dist", "node_modules"]
 }

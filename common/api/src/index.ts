@@ -2,8 +2,6 @@
 // Copyright (C) 2021-2021 The Kiebitz Authors
 // README.md contains license information.
 
-export * from "./backend";
-export * from "./fixtures";
 export * from "./MediatorApi";
 export * from "./ProviderApi";
 export * from "./types";

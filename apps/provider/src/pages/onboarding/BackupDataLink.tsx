@@ -35,8 +35,8 @@ export const BackupDataLink: React.FC<BackupDataLinkProps> = ({
 
   try {
     providerName = providerName
-      .replaceAll(" ", "-")
-      .replaceAll(".", "-")
+      .replace(/\w/g, "-")
+      .replace(/\./g, "-")
       .toLowerCase();
   } catch (e) {
     // ignore?

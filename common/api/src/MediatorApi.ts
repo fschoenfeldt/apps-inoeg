@@ -2,18 +2,18 @@
 // Copyright (C) 2021-2021 The Kiebitz Authors
 // README.md contains license information.
 
-import { Mediator as KiebitzMediator } from "vanellus";
+import { Mediator as KiebitzMediator, MediatorKeyPairs } from "vanellus";
 import { getBackendInstance } from "./backend";
 import { providers } from "./fixtures/providers";
-import type { MediatorKeyPairs, Provider } from "./types";
+import { Provider } from "./types";
 
 export class MediatorApi {
-  protected keyPairs: MediatorKeyPairs | null = null;
-
   protected mediator: KiebitzMediator;
+  protected keyPairs: MediatorKeyPairs | null;
 
   constructor() {
     this.mediator = new KiebitzMediator("main", getBackendInstance());
+    this.keyPairs = null;
   }
 
   public async authenticate(keyPairs: MediatorKeyPairs): Promise<boolean> {

@@ -1,3 +1,9 @@
 const config = require("../../next.config");
 
-module.exports = config;
+const withTM = require("next-transpile-modules")([
+  "@kiebitz-oss/config",
+  "@kiebitz-oss/api",
+  "@kiebitz-oss/ui",
+]);
+
+module.exports = withTM(config);

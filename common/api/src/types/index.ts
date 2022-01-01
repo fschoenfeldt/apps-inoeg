@@ -5,7 +5,6 @@
 export * from "./ActionMap";
 export * from "./Appointment";
 export * from "./Booking";
-export * from "./MediatorKeyPairs";
 export * from "./Provider";
 export * from "./ProviderKeyPair";
 export * from "./ProviderSecretData";

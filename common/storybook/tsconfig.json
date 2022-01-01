@@ -1,11 +1,9 @@
 {
   "extends": "../../tsconfig.json",
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "@kiebitz-oss/ui",
+  "display": "@kiebitz-oss/storybook",
   "compilerOptions": {
     "lib": ["es2020", "DOM", "DOM.Iterable"],
-    "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "outDir": "dist",
     "baseUrl": "src",
     "jsx": "react-jsx"

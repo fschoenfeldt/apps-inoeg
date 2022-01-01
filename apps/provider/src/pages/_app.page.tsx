@@ -3,7 +3,6 @@ import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
 import { de, en } from "make-plural/plurals";
 import type { AppProps } from "next/app";
-import "provider.css";
 import { useEffect } from "react";
 import "../../../../app.css";
 import { Layout } from "../components/Layout";

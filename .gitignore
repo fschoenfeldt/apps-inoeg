@@ -23,7 +23,6 @@ locales/**/messages.js
 .tsbuildinfo
 .eslintcache
 .cache/*
-.ultra.cache.json
 __pycache__
 .turbo
 

@@ -6,14 +6,8 @@
   "private": true,
   "license": "AGPL-3.0-or-later",
   "type": "module",
-  "source": "src/index.ts",
-  "module": "dist/index.js",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
   "sideEffects": false,
-  "files": [
-    "dist/**"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/kiebitz-oss/apps-ffm",
@@ -21,31 +15,14 @@
   },
   "bugs": "https://github.com/kiebitz-oss/apps-ffm/issues",
   "engines": {
-    "node": "^14.18.1 || >=16.0.0",
-    "yarn": ">=1.22.0",
-    "npm": "please-use-yarn"
+    "node": "^14.18.1 || >=16.0.0"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "clean": "rimraf --no-glob ./dist .tsbuildinfo .ultra.cache.json",
+    "clean": "rimraf --no-glob ./dist .tsbuildinfo",
     "test": "jest --passWithNoTests",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:staged": "lint-staged --allow-empty",
     "typecheck": "tsc --noEmit"
-  },
-  "tsup": {
-    "entry": [
-      "src/index.ts"
-    ],
-    "outDir": "dist",
-    "format": [
-      "esm",
-      "cjs"
-    ],
-    "dts": true,
-    "clean": true,
-    "minify": true
   },
   "dependencies": {
     "@kiebitz-oss/config": "*",
@@ -68,7 +45,6 @@
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.2",
-    "tsup": "^5.11.7",
     "typescript": "^4.5.4"
   },
   "browserslist": [
