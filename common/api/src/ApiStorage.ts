@@ -2,11 +2,13 @@
 // Copyright (C) 2021-2021 The Kiebitz Authors
 // README.md contains license information.
 
+import { InMemoryStorage } from "vanellus";
+
 export class ApiStorage implements Storage {
   constructor(protected prefix: string) {}
 
   /** Returns the current value associated with the given key, or null if the given key does not exist. */
-  public getItem(key: string): string | null {
+  public getItem<T = string>(key: string): T | null {
     const item = this.adapter.getItem(this.pre(key));
 
     if (item) {
@@ -37,7 +39,7 @@ export class ApiStorage implements Storage {
    *
    * Dispatches a storage event on Window objects holding an equivalent Storage object.
    */
-  public setItem(key: string, value: string): void {
+  public setItem(key: string, value: unknown): void {
     try {
       this.adapter.setItem(this.pre(key), JSON.stringify(value));
     } catch (error) {
@@ -62,8 +64,8 @@ export class ApiStorage implements Storage {
   }
 
   protected get adapter(): Storage {
-    return localStorage;
+    return typeof localStorage === "object"
+      ? localStorage
+      : new InMemoryStorage();
   }
-
-  // [name: string]: any;
 }

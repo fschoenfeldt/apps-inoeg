@@ -10,7 +10,6 @@ import { ChangeEventHandler, useEffect, useState } from "react";
 import { useMediatorApi } from "./MediatorApiContext";
 
 const MediatorStartPage: NextPage = () => {
-  const [authenticated, setAuthenticated] = useState<boolean>(false);
   const [invalidFile, setInvalidFile] = useState(false);
   const api = useMediatorApi();
   const router = useRouter();
@@ -21,7 +20,7 @@ const MediatorStartPage: NextPage = () => {
         router.push("/providers");
       }
     });
-  }, [api, authenticated, router]);
+  }, [api, router]);
 
   const uploadFile: ChangeEventHandler<HTMLInputElement> = (event) => {
     const file = event.target.files?.[0];
@@ -29,9 +28,9 @@ const MediatorStartPage: NextPage = () => {
     if (file) {
       const reader = new FileReader();
 
-      reader.onload = function (e) {
-        if (e.target?.result && typeof e.target.result === "string") {
-          const keyPairs = JSON.parse(e.target.result);
+      reader.onload = (event) => {
+        if (event.target?.result && typeof event.target.result === "string") {
+          const keyPairs = JSON.parse(event.target.result);
 
           if (
             keyPairs.signing === undefined ||
@@ -40,9 +39,8 @@ const MediatorStartPage: NextPage = () => {
           ) {
             setInvalidFile(true);
           } else {
-            api.authenticate(keyPairs).then((isAuthenticated) => {
-              setAuthenticated(isAuthenticated);
-            });
+            api.login(keyPairs);
+            router.push("/providers");
           }
         }
       };
@@ -74,7 +72,7 @@ const MediatorStartPage: NextPage = () => {
           )}
 
           {!invalidFile && (
-            <Text>
+            <Text className="mb-8">
               <Trans id="mediator.welcome.upload-key-pairs.notice">
                 Bitte laden Sie die Datei mit Ihren geheimen
                 Vermittlerschlüsseln.

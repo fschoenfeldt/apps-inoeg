@@ -75,7 +75,7 @@ export const SuccessStep: React.FC = () => {
                 </Trans>
               </Title>
 
-              <div className="flex justify-center items-center p-4 text-2xl font-bold text-white bg-black rounded md:text-6xl md:flex-grow">
+              <div className="flex justify-center items-center p-4 text-2xl font-bold text-white bg-black rounded md:grow md:text-6xl">
                 {secret === null
                   ? "Buchung läuft..."
                   : secret.toUpperCase().slice(0, 4)}

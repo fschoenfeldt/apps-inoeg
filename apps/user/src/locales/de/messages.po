@@ -181,11 +181,11 @@ msgstr "Termin jetzt buchen"
 msgid "user.finder.verify.title"
 msgstr "Übersicht"
 
-#: pages/Questionair.tsx:149
+#: pages/Questionair.tsx:152
 msgid "user.welcome.button"
 msgstr "Weiter zum Termin"
 
-#: pages/Questionair.tsx:135
+#: pages/Questionair.tsx:138
 msgid "user.welcome.form_error"
 msgstr "Bitte beantworten Sie alle Fragen, denn sonst können wir keine Termine für Sie heraussuchen. Alle Ihre persönlichen Daten werden nur auf Ihrem Endgerät gespeichert und nicht an einen Server übermittelt oder weitergegeben."
 
@@ -197,27 +197,27 @@ msgstr "Sie sind jetzt nur noch wenige Klicks von Ihrem Termin entfernt."
 msgid "user.welcome.intro-2"
 msgstr "Wir speichern generell keine persönlichen Daten, aber haben ein paar Fragen, damit Sie den richtigen Impfstoff erhalten."
 
-#: pages/Questionair.tsx:85
+#: pages/Questionair.tsx:88
 msgid "user.welcome.question1_value"
 msgstr "Handelt es sich um eine Booster-Impfung?"
 
-#: pages/Questionair.tsx:95
+#: pages/Questionair.tsx:98
 msgid "user.welcome.question2_error"
 msgstr "Es müssen 3 Monate seit Ihrem letzten Impftermin vergangen sein, bevor Sie sich boostern lassen können."
 
-#: pages/Questionair.tsx:101
+#: pages/Questionair.tsx:104
 msgid "user.welcome.question2_value"
 msgstr "Liegt Ihre letzte Impfung mehr als 3 Monate zurück?"
 
-#: pages/Questionair.tsx:109
+#: pages/Questionair.tsx:112
 msgid "user.welcome.question3_value"
 msgstr "Sind sie schwanger oder jünger als 30?"
 
-#: pages/Questionair.tsx:120
+#: pages/Questionair.tsx:123
 msgid "user.welcome.question4_error"
 msgstr "Leider gibt es aktuell (noch) keine Termine für Kinderimpfungen über das Portal. Wir bemühen uns das Angebot schnellstmöglich zu erweitern und bitten bis dahin um Geduld."
 
-#: pages/Questionair.tsx:126
+#: pages/Questionair.tsx:129
 msgid "user.welcome.question4_value"
 msgstr "Sind Sie jünger als 12?"
 

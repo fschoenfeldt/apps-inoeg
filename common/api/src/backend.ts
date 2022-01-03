@@ -4,21 +4,24 @@
 
 import { Backend, InMemoryStorage, Settings, StorageStore } from "vanellus";
 
-export const getBackendInstance = (): Backend => {
+export const getBackendInstance = (
+  storageUrl: string,
+  appointmentsUrl: string
+): Backend => {
   const settings: Settings = {
     appointment: {
       properties: {},
     },
     apiUrls: {
-      storage:
-        process.env.NEXT_PUBLIC_STORAGE_ENDPOINT ||
-        "https://storage.kiebitz.eu/jsonrpc",
-      appointments:
-        process.env.NEXT_PUBLIC_APPOINTMENT_ENDPOINT ||
-        "https://appointments.kiebitz.eu/jsonrpc",
+      storage: storageUrl,
+      appointments: appointmentsUrl,
     },
   };
-  const store = new StorageStore(new InMemoryStorage());
+  const store = new StorageStore(
+    typeof localStorage === "object"
+      ? (localStorage as any)
+      : new InMemoryStorage()
+  );
   const temporaryStore = new StorageStore(new InMemoryStorage());
 
   return new Backend(settings, store, temporaryStore);

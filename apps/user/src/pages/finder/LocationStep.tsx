@@ -10,7 +10,10 @@ import { Types, useFinderState } from "./FinderStateProvider";
 
 export const LocationStep: React.FC = () => {
   const [filterAccessible, setFilterAccessible] = useState<boolean>(false);
-  const [providers, setProviders] = useState<PublicProvider[] | null>(null);
+  const [providers, setProviders] = useState<Record<
+    string,
+    PublicProvider
+  > | null>(null);
   const api = useUserApi();
   const { dispatch, state } = useFinderState();
 
@@ -66,19 +69,19 @@ export const LocationStep: React.FC = () => {
         {providers === null ? (
           <div>loading...</div>
         ) : (
-          providers
-            .filter((provider) =>
-              filterAccessible ? provider.accessible : true
+          Object.keys(providers)
+            .filter((providerId) =>
+              filterAccessible ? providers?.[providerId].accessible : true
             )
-            .map((provider) => (
-              <li key={provider.id}>
+            .map((providerId) => (
+              <li key={providerId}>
                 <Link
                   href="/finder/appointment"
-                  onClick={() => setProvider(provider)}
-                  data-id={provider.id}
+                  onClick={() => setProvider(providers[providerId])}
+                  data-id={providerId}
                   className="block"
                 >
-                  <ProviderCard provider={provider} />
+                  <ProviderCard provider={providers[providerId]} />
                 </Link>
               </li>
             ))

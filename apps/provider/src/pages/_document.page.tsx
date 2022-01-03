@@ -5,8 +5,8 @@ import NextDocument, { Head, Html, Main, NextScript } from "next/document";
  */
 class Document extends NextDocument {
   protected csp =
-    process.env.NODE_ENV !== "production"
-      ? "style-src 'self' 'unsafe-inline'; font-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self'"
+    process.env.NODE_ENV === "development"
+      ? "style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; default-src 'self'; script-src 'unsafe-eval' 'self'"
       : "default-src 'none'; style-src 'self'; manifest-src 'self'; connect-src 'self'; script-src 'self'; font-src 'self'; img-src 'self' data:; prefetch-src 'self'";
 
   render() {

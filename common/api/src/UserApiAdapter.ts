@@ -2,17 +2,20 @@
 // Copyright (C) 2021-2021 The Kiebitz Authors
 // README.md contains license information.
 
-import type { Appointment, PublicProvider } from "../types";
+import type { Appointment, PublicProvider } from "./types";
 
-export interface ApiAdapter {
+export interface UserApiAdapter {
+  login(secret: string): Promise<boolean>;
+
   isAuthenticated(): Promise<boolean>;
 
   logout(): Promise<boolean>;
 
-  getVerifiedProvidersByZip(
-    zip: number,
-    radius?: number
-  ): Promise<PublicProvider[]>;
+  getProvidersByZip(
+    zip?: number,
+    from?: Date,
+    to?: Date
+  ): Promise<Record<string, PublicProvider>>;
 
   getAppointmentsByProvider(
     providerId: string,
@@ -20,9 +23,8 @@ export interface ApiAdapter {
     to?: Date
   ): Promise<Appointment[]>;
 
-  getAppointmentsByZipCode(
-    zipCode: number,
-    radius?: number,
+  getAppointmentsByZip(
+    zip?: number,
     from?: Date,
     to?: Date
   ): Promise<Appointment[]>;

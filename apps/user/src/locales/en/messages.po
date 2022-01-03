@@ -181,11 +181,11 @@ msgstr ""
 msgid "user.finder.verify.title"
 msgstr ""
 
-#: pages/Questionair.tsx:149
+#: pages/Questionair.tsx:152
 msgid "user.welcome.button"
 msgstr ""
 
-#: pages/Questionair.tsx:135
+#: pages/Questionair.tsx:138
 msgid "user.welcome.form_error"
 msgstr ""
 
@@ -197,27 +197,27 @@ msgstr ""
 msgid "user.welcome.intro-2"
 msgstr ""
 
-#: pages/Questionair.tsx:85
+#: pages/Questionair.tsx:88
 msgid "user.welcome.question1_value"
 msgstr ""
 
-#: pages/Questionair.tsx:95
+#: pages/Questionair.tsx:98
 msgid "user.welcome.question2_error"
 msgstr ""
 
-#: pages/Questionair.tsx:101
+#: pages/Questionair.tsx:104
 msgid "user.welcome.question2_value"
 msgstr ""
 
-#: pages/Questionair.tsx:109
+#: pages/Questionair.tsx:112
 msgid "user.welcome.question3_value"
 msgstr ""
 
-#: pages/Questionair.tsx:120
+#: pages/Questionair.tsx:123
 msgid "user.welcome.question4_error"
 msgstr ""
 
-#: pages/Questionair.tsx:126
+#: pages/Questionair.tsx:129
 msgid "user.welcome.question4_value"
 msgstr ""
 

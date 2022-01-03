@@ -1,9 +1,4 @@
-import {
-  Appointment,
-  formatDate,
-  formatTime,
-  getHexId,
-} from "@kiebitz-oss/api";
+import { Appointment } from "@kiebitz-oss/api";
 import { vaccines } from "@kiebitz-oss/config";
 import {
   Button,
@@ -79,8 +74,6 @@ const resolver: Resolver<FormData> = async (values) => {
     });
   }
 
-  console.log({ values, errors });
-
   return {
     values,
     errors,
@@ -125,14 +118,14 @@ export const CreateAppointmentModal: React.FC<CreateAppointmentModal> = ({
   let appointment: Appointment | undefined;
 
   if (id !== undefined) {
-    appointment = appointments?.find((app) => getHexId(app.id) === id);
+    appointment = appointments?.find((app) => app.id === id);
   }
 
   useEffectOnce(() => {
     if (appointment) {
       const appointmentData: FormData = {
-        time: formatTime(appointment.date || new Date()),
-        date: formatDate(appointment.date || new Date()),
+        time: (appointment.date || new Date()).toLocaleTimeString(),
+        date: (appointment.date || new Date()).toLocaleDateString(),
         slots: appointment.slots.length,
         duration: appointment.duration,
       };
@@ -144,8 +137,8 @@ export const CreateAppointmentModal: React.FC<CreateAppointmentModal> = ({
       const newData: FormData = {
         duration: data.duration || 30,
         slots: data.slots || 1,
-        time: formatTime(date),
-        date: formatDate(date),
+        time: date.toLocaleTimeString(),
+        date: date.toLocaleDateString(),
       };
 
       // let firstProperty;
@@ -247,7 +240,7 @@ export const CreateAppointmentModal: React.FC<CreateAppointmentModal> = ({
                   message: "Datum",
                 })}
                 type="date"
-                className="flex-grow"
+                className="grow"
                 {...register("date", {
                   required: true,
                 })}

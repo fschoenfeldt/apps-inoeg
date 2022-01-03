@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2021-12-17 20:33+0100\n"
+"POT-Creation-Date: 2021-12-25 18:25+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,27 +49,15 @@ msgstr ""
 msgid "common.footer.title.languages"
 msgstr ""
 
-#: pages/logged-out.page.tsx:25
-msgid "mediator.logged-out.log-in-again"
-msgstr ""
-
-#: pages/logged-out.page.tsx:18
-msgid "mediator.logged-out.notice"
-msgstr ""
-
-#: pages/logged-out.page.tsx:14
-msgid "mediator.logged-out.title"
-msgstr ""
-
-#: pages/logout.page.tsx:33
+#: pages/logout.page.tsx:34
 msgid "mediator.logout.button"
 msgstr ""
 
-#: pages/logout.page.tsx:25
+#: pages/logout.page.tsx:26
 msgid "mediator.logout.intro"
 msgstr ""
 
-#: pages/logout.page.tsx:21
+#: pages/logout.page.tsx:22
 msgid "mediator.logout.title"
 msgstr ""
 
@@ -89,67 +77,67 @@ msgstr ""
 msgid "mediator.provider-row.valid"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:122
+#: pages/providers/[id].page.tsx:64
 msgid "mediator.provider-show.button-confirm"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:132
+#: pages/providers/[id].page.tsx:70
 msgid "mediator.provider-show.button-unconfirm"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:82
+#: pages/providers/ProviderDetails.tsx:58
 msgid "mediator.provider-show.city"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:106
+#: pages/providers/ProviderDetails.tsx:82
 msgid "mediator.provider-show.description"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:94
+#: pages/providers/ProviderDetails.tsx:70
 msgid "mediator.provider-show.email"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:48
+#: pages/providers/ProviderDetails.tsx:24
 msgid "mediator.provider-show.field"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:70
+#: pages/providers/ProviderDetails.tsx:46
 msgid "mediator.provider-show.name"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:100
+#: pages/providers/ProviderDetails.tsx:76
 msgid "mediator.provider-show.phone"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:76
+#: pages/providers/ProviderDetails.tsx:52
 msgid "mediator.provider-show.street"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:39
+#: pages/providers/ProviderDetails.tsx:15
 msgid "mediator.provider-show.title"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:51
+#: pages/providers/ProviderDetails.tsx:27
 msgid "mediator.provider-show.value"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:58
+#: pages/providers/ProviderDetails.tsx:34
 msgid "mediator.provider-show.verified"
 msgstr ""
 
-#: pages/providers/[id].page.tsx:88
+#: pages/providers/ProviderDetails.tsx:64
 msgid "mediator.provider-show.zip-code"
 msgstr ""
 
-#: pages/providers/ProvidersList.tsx:65
+#: pages/providers/ProvidersList.tsx:66
 msgid "mediator.providers-list.address"
 msgstr ""
 
-#: pages/providers/ProvidersList.tsx:102
+#: pages/providers/ProvidersList.tsx:103
 msgid "mediator.providers-list.button-confirm"
 msgstr ""
 
-#: pages/providers/ProvidersList.tsx:115
+#: pages/providers/ProvidersList.tsx:116
 msgid "mediator.providers-list.button-unconfirm"
 msgstr ""
 
@@ -157,15 +145,15 @@ msgstr ""
 msgid "mediator.providers-list.caption"
 msgstr ""
 
-#: pages/providers/ProvidersList.tsx:62
+#: pages/providers/ProvidersList.tsx:63
 msgid "mediator.providers-list.name"
 msgstr ""
 
-#: pages/providers/ProvidersList.tsx:54
+#: pages/providers/ProvidersList.tsx:55
 msgid "mediator.providers-list.select-all"
 msgstr ""
 
-#: pages/providers/ProvidersList.tsx:68
+#: pages/providers/ProvidersList.tsx:69
 msgid "mediator.providers-list.status"
 msgstr ""
 
@@ -217,19 +205,19 @@ msgstr ""
 msgid "mediator.providers.confirm-modal.zip-code"
 msgstr ""
 
-#: pages/ReconfirmProvidersModal.tsx:72
+#: pages/ReconfirmProvidersModal.tsx:71
 msgid "mediator.providers.reconfirm-modal.button-submit"
 msgstr ""
 
-#: pages/ReconfirmProvidersModal.tsx:60
+#: pages/ReconfirmProvidersModal.tsx:59
 msgid "mediator.providers.reconfirm-modal.in-progress"
 msgstr ""
 
-#: pages/ReconfirmProvidersModal.tsx:64
+#: pages/ReconfirmProvidersModal.tsx:63
 msgid "mediator.providers.reconfirm-modal.info"
 msgstr ""
 
-#: pages/ReconfirmProvidersModal.tsx:52
+#: pages/ReconfirmProvidersModal.tsx:51
 msgid "mediator.providers.reconfirm-modal.title"
 msgstr ""
 
@@ -285,22 +273,26 @@ msgstr ""
 msgid "mediator.providers.unconfirm-modal.zip-code"
 msgstr ""
 
-#: pages/index.page.tsx:58
+#: pages/settings/index.page.tsx:10
+msgid "mediator.settings.title"
+msgstr ""
+
+#: pages/index.page.tsx:56
 msgid "mediator.welcome.title"
 msgstr ""
 
-#: pages/index.page.tsx:63
+#: pages/index.page.tsx:61
 msgid "mediator.welcome.upload-key-pairs"
 msgstr ""
 
-#: pages/index.page.tsx:90
+#: pages/index.page.tsx:88
 msgid "mediator.welcome.upload-key-pairs.input"
 msgstr ""
 
-#: pages/index.page.tsx:70
+#: pages/index.page.tsx:68
 msgid "mediator.welcome.upload-key-pairs.invalid-file"
 msgstr ""
 
-#: pages/index.page.tsx:78
+#: pages/index.page.tsx:76
 msgid "mediator.welcome.upload-key-pairs.notice"
 msgstr ""

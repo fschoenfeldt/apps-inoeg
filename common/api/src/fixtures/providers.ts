@@ -4,9 +4,9 @@
 
 import type { Provider } from "../types";
 
-export const providers: Provider[] = [
-  {
-    id: "1",
+export const providers: Record<string, Provider> = {
+  UjIVIWQuZEQXbJXGzKavo: {
+    id: "UjIVIWQuZEQXbJXGzKavo",
     name: "Impfzentrum FFM",
     street: "Ludwig-Ehrhard-Anlage 1",
     zipCode: "60327",
@@ -16,8 +16,8 @@ export const providers: Provider[] = [
     appointments: [],
     description: "",
   },
-  {
-    id: "2",
+  B8Hy0xqXdJsFkH6tXJlFS: {
+    id: "B8Hy0xqXdJsFkH6tXJlFS",
     name: "Impfzentrum FFM 2",
     street: "Ludwig-Ehrhard-Anlage 1",
     zipCode: "60327",
@@ -28,8 +28,8 @@ export const providers: Provider[] = [
       "Die einzigartigste und größte Latin Diskothek in Hessen, die ausschließlich dem lateinamerikanischen Lebensgefühl gewidmet ist.",
     appointments: [],
   },
-  {
-    id: "3",
+  IuKkW2RJ3UyZXFyx4HT7: {
+    id: "IuKkW2RJ3UyZXFyx4HT7",
     name: "Impfzentrum FFM 3",
     street: "Ludwig-Ehrhard-Anlage 1",
     zipCode: "60327",
@@ -39,8 +39,8 @@ export const providers: Provider[] = [
     appointments: [],
     description: "",
   },
-  {
-    id: "4",
+  LEfD1ABHq9wsx49O4em8h: {
+    id: "LEfD1ABHq9wsx49O4em8h",
     name: "Impfzentrum FFM 4",
     street: "Ludwig-Ehrhard-Anlage 1",
     zipCode: "60327",
@@ -50,8 +50,8 @@ export const providers: Provider[] = [
     appointments: [],
     description: "",
   },
-  {
-    id: "5",
+  pZEx15hBz14IRtbtLSw8s: {
+    id: "pZEx15hBz14IRtbtLSw8s",
     name: "Impfzentrum FFM 5",
     street: "Ludwig-Ehrhard-Anlage 1",
     zipCode: "60327",
@@ -61,8 +61,8 @@ export const providers: Provider[] = [
     appointments: [],
     description: "",
   },
-  {
-    id: "6",
+  aSqhETLtQTGy0f7NSjyiU: {
+    id: "aSqhETLtQTGy0f7NSjyiU",
     name: "Impfzentrum FFM 6",
     street: "Ludwig-Ehrhard-Anlage 1",
     zipCode: "60327",
@@ -72,8 +72,8 @@ export const providers: Provider[] = [
     appointments: [],
     description: "",
   },
-  {
-    id: "7",
+  vqymCebRLX0rpCAzNw0Ld: {
+    id: "vqymCebRLX0rpCAzNw0Ld",
     name: "Impfzentrum FFM 7",
     street: "Ludwig-Ehrhard-Anlage 1",
     zipCode: "60327",
@@ -83,4 +83,4 @@ export const providers: Provider[] = [
     appointments: [],
     description: "",
   },
-];
+};

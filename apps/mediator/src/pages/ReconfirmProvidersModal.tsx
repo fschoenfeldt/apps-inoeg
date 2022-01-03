@@ -25,11 +25,10 @@ export const ReconfirmProvidersModal: React.FC<
   const api = useMediatorApi();
 
   const doReconfirmProviders = async () => {
-    console.log("running");
     setStatus("running");
 
     return Promise.all(
-      providers.map((provider) => api.reconfirmProvider(provider))
+      providers.map((provider) => api.reconfirmProvider(provider.id))
     )
       .then(() => {
         setStatus("success");

@@ -7,7 +7,7 @@ import { ReconfirmProvidersModal } from "../ReconfirmProvidersModal";
 import { ProviderRow } from "./ProviderRow";
 
 export interface ProviderListProps {
-  providers: Provider[];
+  providers: Record<string, Provider>;
 }
 
 export const ProviderList: React.FC<ProviderListProps> = ({ providers }) => {
@@ -18,7 +18,7 @@ export const ProviderList: React.FC<ProviderListProps> = ({ providers }) => {
     const checked = event.currentTarget.checked;
 
     setSelectedProviders(
-      checked ? providers.map((provider) => provider.id) : []
+      checked ? Object.keys(providers).map((providerId) => providerId) : []
     );
   };
 
@@ -42,15 +42,18 @@ export const ProviderList: React.FC<ProviderListProps> = ({ providers }) => {
             Tabelle der Impfanbieter
           </Trans>
         </caption>
+
         <thead>
-          <tr className="hover:bg-primary/10 cursor-pointer">
+          <tr>
             <th scope="col" className="inline-flex items-center w-6">
               <input
                 type="checkbox"
                 className="checkbox"
                 name="providers[]"
                 onChange={onSelectAll}
-                checked={selectedProviders.length === providers.length}
+                checked={
+                  selectedProviders.length === Object.keys(providers).length
+                }
                 aria-label={t({
                   id: "mediator.providers-list.select-all",
                   message: "Alle Impfanbieter auswählen oder abwählen",
@@ -74,12 +77,12 @@ export const ProviderList: React.FC<ProviderListProps> = ({ providers }) => {
         </thead>
 
         <tbody>
-          {providers.map((provider) => {
+          {Object.keys(providers).map((providerId) => {
             return (
               <ProviderRow
-                key={provider.id}
-                provider={provider}
-                selected={selectedProviders.includes(provider.id)}
+                key={providerId}
+                provider={providers[providerId]}
+                selected={selectedProviders.includes(providerId)}
                 onSelect={onSelect}
               />
             );

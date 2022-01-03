@@ -29,6 +29,7 @@ const SchedulePage: React.FC = () => {
     <main className="content">
       <div className="flex flex-row justify-between w-full">
         <Title>Impftermine</Title>
+
         <Button size="sm" onClick={toggleModal}>
           Impftermin anlegen
         </Button>

@@ -23,7 +23,7 @@ export const UnconfirmProviderModal: React.FC<UnconfirmProviderModal> = ({
   const api = useMediatorApi();
 
   const doUnconfirmProvider = () => {
-    api.unconfirmProvider(provider).then(() => {
+    api.unconfirmProvider(provider.id).then(() => {
       if (onClose) {
         onClose();
       }

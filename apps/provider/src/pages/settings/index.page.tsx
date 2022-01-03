@@ -2,10 +2,15 @@ import { AppointmentSet } from "@kiebitz-oss/api";
 import { Button, Title } from "@kiebitz-oss/ui";
 import { Trans } from "@lingui/macro";
 import type { NextPage } from "next";
+import { useState } from "react";
+import { DataSecret } from "../onboarding/DataSecret";
 import { useProviderApi } from "../ProviderApiContext";
 
 const SettingsPage: NextPage = () => {
   const api = useProviderApi();
+  const [secret, setSecret] = useState<string | null>(api.getSecret());
+
+  console.log(api);
 
   const createTestSet = async () => {
     const set = AppointmentSet.createAppointmentSet(
@@ -40,6 +45,8 @@ const SettingsPage: NextPage = () => {
       <Title>
         <Trans id="provider.settings.title">Einstellungen</Trans>
       </Title>
+
+      {secret && <DataSecret secret={secret} />}
 
       <Button onClick={() => createTestSet()}>Create TestSet</Button>
     </main>

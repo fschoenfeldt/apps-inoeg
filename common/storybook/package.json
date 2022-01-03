@@ -1,7 +1,7 @@
 {
   "name": "@kiebitz-oss/storybook",
   "description": "Kiebitz Web Applications",
-  "version": "1.0.0",
+  "version": "0.6.0",
   "author": "Benjamin Bender <bb@codepoet.de>",
   "private": true,
   "license": "AGPL-3.0-or-later",

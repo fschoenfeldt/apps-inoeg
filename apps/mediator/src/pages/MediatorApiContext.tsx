@@ -1,17 +1,18 @@
-import { MediatorApi } from "@kiebitz-oss/api";
+import { MediatorApiAdapter } from "@kiebitz-oss/api";
 import { createContext, useContext } from "react";
 
 interface MediatorApiContext {
-  api: MediatorApi;
+  api: MediatorApiAdapter;
 }
 
 const MediatorApiContext = createContext<MediatorApiContext | undefined>(
   undefined
 );
 
-export const MediatorApiProvider: React.FC = ({ children }) => {
-  const api = new MediatorApi();
-
+export const MediatorApiProvider: React.FC<{ api: MediatorApiAdapter }> = ({
+  children,
+  api,
+}) => {
   return (
     <MediatorApiContext.Provider value={{ api }}>
       {children}

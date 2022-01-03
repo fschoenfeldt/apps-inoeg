@@ -3,7 +3,13 @@
 // README.md contains license information.
 
 export * from "./MediatorApi";
+export * from "./MediatorApiAdapter";
+export * from "./MediatorApiMock";
 export * from "./ProviderApi";
+export * from "./ProviderApiAdapter";
+export * from "./ProviderApiMock";
 export * from "./types";
 export * from "./UserApi";
-export * from "./utils";
+export * from "./UserApiAdapter";
+export * from "./UserApiMock";
+export * from "./utils/AppointmentSet";

@@ -56,15 +56,18 @@ export const Questionaire: React.FC = () => {
             resetField("q2");
             resetField("q3");
             resetField("q4");
+            break;
           }
 
           case "q2": {
             resetField("q3");
             resetField("q4");
+            break;
           }
 
           case "q3": {
             resetField("q4");
+            break;
           }
         }
       }
@@ -77,7 +80,7 @@ export const Questionaire: React.FC = () => {
 
   return (
     <form
-      className="flex flex-col mb-6 md:mb-8 lg:max-w-full flex-grow"
+      className="flex flex-col grow mb-6 md:mb-8 lg:max-w-full"
       onSubmit={handleSubmit(onSubmit)}
     >
       <div className="flex flex-col flex-1 gap-5">

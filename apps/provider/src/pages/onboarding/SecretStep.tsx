@@ -5,21 +5,27 @@
 import { Text, Title } from "@kiebitz-oss/ui";
 import { Trans } from "@lingui/macro";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "../../components/Link";
+import { useProviderApi } from "../ProviderApiContext";
 import { BackupDataLink } from "./BackupDataLink";
 import { DataSecret } from "./DataSecret";
 import { useOnboardingState } from "./OnboardingStateProvider";
 
 export const SecretStep: React.FC = () => {
+  const api = useProviderApi();
+  const [secret, setSecret] = useState<string | null>(api.getSecret());
   const { state } = useOnboardingState();
+
   const router = useRouter();
 
   useEffect(() => {
     if (!state.data) {
       router.push("/onboarding");
     }
-  }, [state, router]);
+
+    setSecret(api.getSecret());
+  }, [api, state, router]);
 
   return (
     <main>
@@ -37,7 +43,7 @@ export const SecretStep: React.FC = () => {
 
         <BackupDataLink className="mb-12" />
 
-        <DataSecret secret={"1234567890123456"} />
+        {secret && <DataSecret secret={secret} />}
 
         <Link href="/schedule" type="button" variant="primary">
           <Trans id="provider.onboarding.secret.button">

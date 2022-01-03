@@ -63,6 +63,10 @@
     @apply mb-2;
   }
 
+  form {
+    @apply flex flex-col;
+  }
+
   a,
   button {
     @apply default-focus;

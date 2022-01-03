@@ -1,15 +1,16 @@
-import { UserApi } from "@kiebitz-oss/api";
+import { UserApiAdapter } from "@kiebitz-oss/api";
 import { createContext, useContext } from "react";
 
 interface UserApiContext {
-  api: UserApi;
+  api: UserApiAdapter;
 }
 
 const UserApiContext = createContext<UserApiContext | undefined>(undefined);
 
-export const UserApiProvider: React.FC = ({ children }) => {
-  const api = new UserApi();
-
+export const UserApiProvider: React.FC<{ api: UserApiAdapter }> = ({
+  children,
+  api,
+}) => {
   return (
     <UserApiContext.Provider value={{ api }}>
       {children}

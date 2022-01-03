@@ -9,7 +9,6 @@ export const Nav: React.FC = () => {
 
   useEffect(() => {
     api.isAuthenticated().then((result) => {
-      console.log({ authed: result });
       setAuthed(result);
     });
   }, [api]);

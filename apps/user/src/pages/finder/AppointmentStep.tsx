@@ -61,7 +61,7 @@ export const AppointmentStep: React.FC = () => {
   useEffect(() => {
     state?.provider?.id
       ? api.getAppointmentsByProvider(state.provider.id).then(setAppointments)
-      : api.getAppointmentsByZipCode(30363).then(setAppointments);
+      : api.getAppointmentsByZip(10707).then(setAppointments);
   }, [api, state.provider]);
 
   const onDateChange: ChangeEventHandler<HTMLInputElement> = (event) => {

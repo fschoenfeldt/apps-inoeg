@@ -8,8 +8,8 @@ module.exports = {
   content: [
     "./src/**/*.tsx",
     "./src/**/*.mdx",
-    "../../packages/ui/src/**/*.tsx",
-    "./packages/ui/src/**/*.tsx",
+    "../../common/ui/src/**/*.tsx",
+    "./common/ui/src/**/*.tsx",
   ],
 
   theme: {

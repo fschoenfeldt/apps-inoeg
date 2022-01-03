@@ -1,13 +1,14 @@
 import type { Provider } from "@kiebitz-oss/api";
-import { Button, Title } from "@kiebitz-oss/ui";
+import { Button } from "@kiebitz-oss/ui";
 import { Trans } from "@lingui/macro";
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { MouseEventHandler, useEffect, useState } from "react";
 import { BackLink } from "../../components/BackLink";
 import { ConfirmProviderModal } from "../ConfirmProviderModal";
 import { useMediatorApi } from "../MediatorApiContext";
 import { UnconfirmProviderModal } from "../UnconfirmProviderModal";
+import { ProviderDetails } from "./ProviderDetails";
 
 const ProviderShowPage: NextPage = () => {
   const [provider, setProvider] = useState<Provider>();
@@ -27,6 +28,26 @@ const ProviderShowPage: NextPage = () => {
     }
   }, [api, id]);
 
+  const doUnconfirmProvider: MouseEventHandler<HTMLButtonElement> = () => {
+    if (provider) {
+      api.unconfirmProvider(provider.id).then((provider) => {
+        if (provider) {
+          setProvider(provider);
+        }
+      });
+    }
+  };
+
+  const doConfirmProvider: MouseEventHandler<HTMLButtonElement> = () => {
+    if (provider) {
+      api.confirmProvider(provider.id).then((provider) => {
+        if (provider) {
+          setProvider(provider);
+        }
+      });
+    }
+  };
+
   if (!provider) {
     return <main>Provider nicht gefunden</main>;
   }
@@ -35,112 +56,31 @@ const ProviderShowPage: NextPage = () => {
     <main>
       <BackLink href="/providers">Zurück zur Übersicht</BackLink>
 
-      <Title>
-        <Trans id="mediator.provider-show.title">
-          Impfanbieter "{provider.name}"
-        </Trans>
-      </Title>
-
-      <table className="table mb-8 striped">
-        <thead>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.field">Feld</Trans>
-            </th>
-            <th>
-              <Trans id="mediator.provider-show.value">Wert</Trans>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.verified">Bestätigt?</Trans>
-            </th>
-            <td>
-              {provider.verified ? (
-                <span className="font-semibold text-green-700">ja</span>
-              ) : (
-                <span className="font-semibold text-red-700">nein</span>
-              )}
-            </td>
-          </tr>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.name">Name</Trans>
-            </th>
-            <td>{provider.name}</td>
-          </tr>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.street">Straße</Trans>
-            </th>
-            <td>{provider.street}</td>
-          </tr>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.city">Stadt</Trans>
-            </th>
-            <td>{provider.city || " -- "}</td>
-          </tr>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.zip-code">Postleitzahl</Trans>
-            </th>
-            <td>{provider.zipCode}</td>
-          </tr>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.email">E-Mail</Trans>
-            </th>
-            <td>{provider.email || " -- "}</td>
-          </tr>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.phone">Telefonnummer</Trans>
-            </th>
-            <td>{provider.phone || " -- "}</td>
-          </tr>
-          <tr>
-            <th>
-              <Trans id="mediator.provider-show.description">
-                Beschreibung
-              </Trans>
-            </th>
-            <td>{provider.description || " -- "}</td>
-          </tr>
-        </tbody>
-      </table>
+      <ProviderDetails provider={provider} />
 
       <div className="buttons-list">
         {!provider.verified ? (
-          <Button
-            variant="primary"
-            size="sm"
-            onClick={() => setModal("confirm")}
-          >
+          <Button variant="primary" size="sm" onClick={doConfirmProvider}>
             <Trans id="mediator.provider-show.button-confirm">
               Anbieter bestätigen
             </Trans>
           </Button>
         ) : (
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={() => setModal("unconfirm")}
-          >
+          <Button variant="secondary" size="sm" onClick={doUnconfirmProvider}>
             <Trans id="mediator.provider-show.button-unconfirm">
               Anbieter sperren
             </Trans>
           </Button>
         )}
       </div>
+
       {modal === "confirm" && (
         <ConfirmProviderModal
           provider={provider}
           onClose={() => setModal(null)}
         />
       )}
+
       {modal === "unconfirm" && (
         <UnconfirmProviderModal
           provider={provider}

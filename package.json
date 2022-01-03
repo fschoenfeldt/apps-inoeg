@@ -1,7 +1,7 @@
 {
   "name": "kiebitz-ffm",
   "description": "Kiebitz Web Applications",
-  "version": "1.0.0",
+  "version": "0.6.0",
   "private": true,
   "license": "AGPL-3.0-or-later",
   "contributors": [
@@ -14,8 +14,7 @@
   },
   "bugs": "https://github.com/kiebitz-oss/apps-ffm/issues",
   "engines": {
-    "node": "^14.18.1 || >=16.0.0",
-    "pnpm": "^6"
+    "node": "^14.18.1 || >=16.0.0"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",

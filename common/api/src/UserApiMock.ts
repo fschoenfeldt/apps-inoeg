@@ -4,16 +4,28 @@
 
 import { Buffer } from "buffer";
 import { randomBytes } from "vanellus";
-import { appointments } from "../fixtures/appointments";
-import { providers } from "../fixtures/providers";
-import type { Appointment, PublicProvider } from "../types";
-import { ApiAdapter } from "./ApiAdapter";
+import { ApiStorage } from "./ApiStorage";
+import GlobalApiStorage from "./GlobalApiStorage";
+import type { Appointment } from "./types";
+import { UserApiAdapter } from "./UserApiAdapter";
 
 const USER_BOOKED_APPOINTMENT_KEY = "booked_id";
 const USER_SECRET_KEY = "secret";
 
-export class MockAdapter implements ApiAdapter {
-  public constructor(protected storage: Storage) {}
+export class UserApiMock implements UserApiAdapter {
+  protected mockGlobal: GlobalApiStorage;
+  protected storage: ApiStorage;
+
+  constructor() {
+    this.storage = new ApiStorage("user");
+    this.mockGlobal = new GlobalApiStorage();
+  }
+
+  public async login(secret: string): Promise<boolean> {
+    this.storage.setItem(USER_SECRET_KEY, secret);
+
+    return true;
+  }
 
   public async isAuthenticated(): Promise<boolean> {
     const secret = this.getSecret();
@@ -31,15 +43,8 @@ export class MockAdapter implements ApiAdapter {
     return true;
   }
 
-  public async getVerifiedProvidersByZip(
-    zip: number,
-    radius = 5
-  ): Promise<PublicProvider[]> {
-    console.info(
-      `Called MockAdapter::getVerifiedProvidersByZip(${zip}, ${radius})`
-    );
-
-    return providers;
+  public async getProvidersByZip(zip?: number, from?: Date, to?: Date) {
+    return this.mockGlobal.getProviders();
   }
 
   public async getAppointmentsByProvider(
@@ -51,28 +56,31 @@ export class MockAdapter implements ApiAdapter {
       `Called MockAdapter::getAppointmentsByProvider(${providerId})`
     );
 
-    return appointments.filter(
-      (appointment) => providerId === appointment.provider.id
-    );
+    return this.mockGlobal
+      .getProvider(providerId)
+      .then((provider) => provider.appointments);
   }
 
-  public async getAppointmentsByZipCode(
-    zipCode: number,
-    radius = 5
-    // from?: Date,
-    // to?: Date
-  ): Promise<Appointment[]> {
-    console.info(
-      `Called MockAdapter::getAppointmentsByZipCode(${zipCode}, ${radius})`
-    );
-
-    return appointments;
+  public async getAppointmentsByZip(zip?: number, from?: Date, to?: Date) {
+    console.info(`Called MockAdapter::getAppointmentsByZip(${zip})`);
 
     /* Filtering disabled for now because of limited test-data
     return appointments.filter(
       (appointment) => zipCode.toString() === appointment.provider.zipCode
     );
     */
+
+    return this.mockGlobal
+      .getProviders()
+      .then((providers) =>
+        Object.values(providers).reduce<Appointment[]>(
+          (current, provider) => [
+            ...current,
+            ...(provider?.appointments || []),
+          ],
+          []
+        )
+      );
   }
 
   public async cancelAppointment(appointmentId: string): Promise<boolean> {

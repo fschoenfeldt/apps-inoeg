@@ -88,7 +88,7 @@ export class AppointmentSet implements Iterable<AppointmentItem> {
 
     this.appointmentItems = appointments
       // filter appointments without slots
-      .filter((app) => app.slots.length > 0)
+      // .filter((app) => app.slots.length > 0)
       // sort by startDate
       .sort((a, b) => a.date.getTime() - b.date.getTime())
       // map to AppointmentItem
@@ -133,9 +133,8 @@ export class AppointmentSet implements Iterable<AppointmentItem> {
     return (appointmentItems || this.appointmentItems).filter(
       (appointmentItem) => {
         return (
-          appointmentItem.startDate > from &&
-          appointmentItem.endDate < to &&
-          appointmentItem.appointment.slots.length >= 0
+          appointmentItem.startDate > from && appointmentItem.endDate < to
+          // && appointmentItem.appointment.slots.length >= 0
         );
       }
     );

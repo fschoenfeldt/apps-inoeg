@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2021-12-17 20:33+0100\n"
+"POT-Creation-Date: 2021-12-25 18:25+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -49,27 +49,15 @@ msgstr "Informationen"
 msgid "common.footer.title.languages"
 msgstr "Sprache"
 
-#: pages/logged-out.page.tsx:25
-msgid "mediator.logged-out.log-in-again"
-msgstr "Einloggen"
-
-#: pages/logged-out.page.tsx:18
-msgid "mediator.logged-out.notice"
-msgstr "Sie wurden erfolgreich abgemeldet. Sie können sich jederzeit mit Ihrer Schlüsseldatei wieder anmelden."
-
-#: pages/logged-out.page.tsx:14
-msgid "mediator.logged-out.title"
-msgstr "mediator.logged-out.title"
-
-#: pages/logout.page.tsx:33
+#: pages/logout.page.tsx:34
 msgid "mediator.logout.button"
 msgstr "Abmelden"
 
-#: pages/logout.page.tsx:25
+#: pages/logout.page.tsx:26
 msgid "mediator.logout.intro"
 msgstr "Möchtest Du Dich wirklich abmelden? Bitte stelle vorher sicher, dass Du Deinen Sicherheitscode notiert hast. Nur mit diesem Code kannst Du Dich später wieder anmelden."
 
-#: pages/logout.page.tsx:21
+#: pages/logout.page.tsx:22
 msgid "mediator.logout.title"
 msgstr "Abmelden"
 
@@ -89,67 +77,67 @@ msgstr "Impfanbieter auswählen oder abwählen"
 msgid "mediator.provider-row.valid"
 msgstr "bestätigt"
 
-#: pages/providers/[id].page.tsx:122
+#: pages/providers/[id].page.tsx:64
 msgid "mediator.provider-show.button-confirm"
 msgstr "Anbieter bestätigen"
 
-#: pages/providers/[id].page.tsx:132
+#: pages/providers/[id].page.tsx:70
 msgid "mediator.provider-show.button-unconfirm"
 msgstr "Anbieter sperren"
 
-#: pages/providers/[id].page.tsx:82
+#: pages/providers/ProviderDetails.tsx:58
 msgid "mediator.provider-show.city"
 msgstr "Stadt"
 
-#: pages/providers/[id].page.tsx:106
+#: pages/providers/ProviderDetails.tsx:82
 msgid "mediator.provider-show.description"
 msgstr "Beschreibung"
 
-#: pages/providers/[id].page.tsx:94
+#: pages/providers/ProviderDetails.tsx:70
 msgid "mediator.provider-show.email"
 msgstr "E-Mail"
 
-#: pages/providers/[id].page.tsx:48
+#: pages/providers/ProviderDetails.tsx:24
 msgid "mediator.provider-show.field"
 msgstr "Feld"
 
-#: pages/providers/[id].page.tsx:70
+#: pages/providers/ProviderDetails.tsx:46
 msgid "mediator.provider-show.name"
 msgstr "Name"
 
-#: pages/providers/[id].page.tsx:100
+#: pages/providers/ProviderDetails.tsx:76
 msgid "mediator.provider-show.phone"
 msgstr "Telefonnummer"
 
-#: pages/providers/[id].page.tsx:76
+#: pages/providers/ProviderDetails.tsx:52
 msgid "mediator.provider-show.street"
 msgstr "Straße"
 
-#: pages/providers/[id].page.tsx:39
+#: pages/providers/ProviderDetails.tsx:15
 msgid "mediator.provider-show.title"
 msgstr "Impfanbieter \"{0}\""
 
-#: pages/providers/[id].page.tsx:51
+#: pages/providers/ProviderDetails.tsx:27
 msgid "mediator.provider-show.value"
 msgstr "Wert"
 
-#: pages/providers/[id].page.tsx:58
+#: pages/providers/ProviderDetails.tsx:34
 msgid "mediator.provider-show.verified"
-msgstr "Verifiziert?"
+msgstr "Bestätigt?"
 
-#: pages/providers/[id].page.tsx:88
+#: pages/providers/ProviderDetails.tsx:64
 msgid "mediator.provider-show.zip-code"
 msgstr "Postleitzahl"
 
-#: pages/providers/ProvidersList.tsx:65
+#: pages/providers/ProvidersList.tsx:66
 msgid "mediator.providers-list.address"
 msgstr "Adresse"
 
-#: pages/providers/ProvidersList.tsx:102
+#: pages/providers/ProvidersList.tsx:103
 msgid "mediator.providers-list.button-confirm"
 msgstr "Anbieter bestätigen"
 
-#: pages/providers/ProvidersList.tsx:115
+#: pages/providers/ProvidersList.tsx:116
 msgid "mediator.providers-list.button-unconfirm"
 msgstr "Anbieter sperren"
 
@@ -157,15 +145,15 @@ msgstr "Anbieter sperren"
 msgid "mediator.providers-list.caption"
 msgstr "Tabelle der Impfanbieter"
 
-#: pages/providers/ProvidersList.tsx:62
+#: pages/providers/ProvidersList.tsx:63
 msgid "mediator.providers-list.name"
 msgstr "Name"
 
-#: pages/providers/ProvidersList.tsx:54
+#: pages/providers/ProvidersList.tsx:55
 msgid "mediator.providers-list.select-all"
 msgstr "Alle Impfanbieter auswählen oder abwählen"
 
-#: pages/providers/ProvidersList.tsx:68
+#: pages/providers/ProvidersList.tsx:69
 msgid "mediator.providers-list.status"
 msgstr "Status"
 
@@ -217,25 +205,25 @@ msgstr "Wert"
 msgid "mediator.providers.confirm-modal.zip-code"
 msgstr "Postleitzahl"
 
-#: pages/ReconfirmProvidersModal.tsx:72
+#: pages/ReconfirmProvidersModal.tsx:71
 msgid "mediator.providers.reconfirm-modal.button-submit"
 msgstr "{0} Anbieter neu bestätigen"
 
-#: pages/ReconfirmProvidersModal.tsx:60
+#: pages/ReconfirmProvidersModal.tsx:59
 msgid "mediator.providers.reconfirm-modal.in-progress"
 msgstr "Bestätige Anbieter..."
 
-#: pages/ReconfirmProvidersModal.tsx:64
+#: pages/ReconfirmProvidersModal.tsx:63
 msgid "mediator.providers.reconfirm-modal.info"
 msgstr "Wollen Sie alle bestätigten Anbieter neu bestätigen?"
 
-#: pages/ReconfirmProvidersModal.tsx:52
+#: pages/ReconfirmProvidersModal.tsx:51
 msgid "mediator.providers.reconfirm-modal.title"
 msgstr "Alle neu bestätigen"
 
 #: pages/providers/index.page.tsx:23
 msgid "mediator.providers.title"
-msgstr "Provider Show"
+msgstr "Impfanbieter"
 
 #: pages/UnconfirmProviderModal.tsx:126
 msgid "mediator.providers.unconfirm-modal.button-confirm"
@@ -285,22 +273,26 @@ msgstr "Wert"
 msgid "mediator.providers.unconfirm-modal.zip-code"
 msgstr "Postleitzahl"
 
-#: pages/index.page.tsx:58
+#: pages/settings/index.page.tsx:10
+msgid "mediator.settings.title"
+msgstr "Einstellungen"
+
+#: pages/index.page.tsx:56
 msgid "mediator.welcome.title"
 msgstr "Als Mediator anmelden"
 
-#: pages/index.page.tsx:63
+#: pages/index.page.tsx:61
 msgid "mediator.welcome.upload-key-pairs"
 msgstr "Geheime Schlüssel laden"
 
-#: pages/index.page.tsx:90
+#: pages/index.page.tsx:88
 msgid "mediator.welcome.upload-key-pairs.input"
 msgstr "Datei auswählen"
 
-#: pages/index.page.tsx:70
+#: pages/index.page.tsx:68
 msgid "mediator.welcome.upload-key-pairs.invalid-file"
 msgstr "Die von Ihnen gewählte Datei ist ungültig."
 
-#: pages/index.page.tsx:78
+#: pages/index.page.tsx:76
 msgid "mediator.welcome.upload-key-pairs.notice"
 msgstr "Bitte laden Sie die Datei mit Ihren geheimen Vermittlerschlüsseln."

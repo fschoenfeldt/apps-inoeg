@@ -288,47 +288,47 @@ msgstr "Der Datenschlüssel, den Sie bei der Registrierung erhalten haben."
 msgid "provider.restore-form.secret.label"
 msgstr "Datenschlüssel"
 
-#: pages/schedule/CreateAppointmentModal.tsx:77
+#: pages/schedule/CreateAppointmentModal.tsx:72
 msgid "provider.schedule.create-appointment-modal.too-few-slots"
 msgstr "provider.schedule.create-appointment-modal.too-few-slots"
 
-#: pages/schedule/CreateAppointmentModal.tsx:71
+#: pages/schedule/CreateAppointmentModal.tsx:66
 msgid "provider.schedule.create-appointment-modal.too-many-slots"
 msgstr "provider.schedule.create-appointment-modal.too-many-slots"
 
-#: pages/schedule/CreateAppointmentModal.tsx:323
+#: pages/schedule/CreateAppointmentModal.tsx:316
 msgid "provider.schedule.create.appointment-modal.button"
 msgstr "Speichern"
 
-#: pages/schedule/CreateAppointmentModal.tsx:245
+#: pages/schedule/CreateAppointmentModal.tsx:238
 msgid "provider.schedule.create.appointment-modal.date.label"
 msgstr "Datum"
 
-#: pages/schedule/CreateAppointmentModal.tsx:283
+#: pages/schedule/CreateAppointmentModal.tsx:276
 msgid "provider.schedule.create.appointment-modal.duration-label"
 msgstr "Vstl. Dauer"
 
-#: pages/schedule/CreateAppointmentModal.tsx:290
+#: pages/schedule/CreateAppointmentModal.tsx:283
 msgid "provider.schedule.create.appointment-modal.duration-value"
 msgstr "Dauer: {duration} Minuten"
 
-#: pages/schedule/CreateAppointmentModal.tsx:231
+#: pages/schedule/CreateAppointmentModal.tsx:224
 msgid "provider.schedule.create.appointment-modal.edit-title"
 msgstr "Termin bearbeiten"
 
-#: pages/schedule/CreateAppointmentModal.tsx:235
+#: pages/schedule/CreateAppointmentModal.tsx:228
 msgid "provider.schedule.create.appointment-modal.new-title"
 msgstr "Neuen Termin erstellen"
 
-#: pages/schedule/CreateAppointmentModal.tsx:270
+#: pages/schedule/CreateAppointmentModal.tsx:263
 msgid "provider.schedule.create.appointment-modal.slots.label"
 msgstr "Anzahl Impfdosen"
 
-#: pages/schedule/CreateAppointmentModal.tsx:257
+#: pages/schedule/CreateAppointmentModal.tsx:250
 msgid "provider.schedule.create.appointment-modal.time.label"
 msgstr "Uhrzeit"
 
-#: pages/schedule/CreateAppointmentModal.tsx:302
+#: pages/schedule/CreateAppointmentModal.tsx:295
 msgid "provider.schedule.create.appointment-modal.vaccine-label"
 msgstr "Impfstoff"
 

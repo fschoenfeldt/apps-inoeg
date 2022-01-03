@@ -23,7 +23,7 @@ const ProvidersPage: NextPage = () => {
         <Trans id="mediator.providers.title">Impfanbieter</Trans>
       </Title>
 
-      {providers.length > 0 ? (
+      {typeof providers === "object" ? (
         <ProviderList providers={providers} />
       ) : (
         <>Loading</>

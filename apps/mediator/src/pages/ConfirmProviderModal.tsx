@@ -23,7 +23,7 @@ export const ConfirmProviderModal: React.FC<ConfirmProviderModal> = ({
   const api = useMediatorApi();
 
   const doConfirmProvider = () => {
-    api.confirmProvider(provider).then(() => {
+    api.confirmProvider(provider.id).then(() => {
       if (onClose) {
         onClose();
       }

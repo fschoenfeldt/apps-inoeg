@@ -26,12 +26,12 @@ export const ProviderRow: React.FC<ProviderRowProps> = ({
   return (
     <tr
       key={provider.id}
-      className={clsx("provider-table-row", {
+      className={clsx("hover:bg-primary/10 cursor-pointer", {
         ["selected"]: selected,
       })}
       onClick={onSelectToggle}
     >
-      <td>
+      <td scope="row">
         <input
           type="checkbox"
           className="checkbox"

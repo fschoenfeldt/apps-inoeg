@@ -247,6 +247,7 @@ importers:
       jest: ^27.4.5
       make-plural: ^7.0.0
       next: ^12.0.7
+      next-transpile-modules: ^9.0.0
       postcss-flexbugs-fixes: ^5.0.2
       postcss-preset-env: ^7.0.2
       prettier: ^2.5.0
@@ -294,6 +295,7 @@ importers:
       eslint-plugin-prettier: 4.0.0_1c588f61426b1faf18812943f1678311
       eslint-plugin-tailwindcss: 3.0.2_autoprefixer@10.4.1
       jest: 27.4.5
+      next-transpile-modules: 9.0.0
       postcss-flexbugs-fixes: 5.0.2_postcss@8.4.5
       postcss-preset-env: 7.1.0_postcss@8.4.5
       prettier: 2.5.1
@@ -405,14 +407,16 @@ importers:
       buffer: ^6.0.3
       dayjs: ^1.10.7
       jest: ^27.4.5
+      nanoid: ^3.1.30
       ts-jest: ^27.1.2
       typescript: ^4.5.4
-      vanellus: https://github.com/kiebitz-oss/vanellus/releases/download/v0.0.1/vanellus-0.0.1.tgz
+      vanellus: https://github.com/kiebitz-oss/vanellus-inoeg/releases/download/v0.6.0/vanellus-0.6.0.tgz
     dependencies:
       '@kiebitz-oss/config': link:../config
       buffer: 6.0.3
       dayjs: 1.10.7
-      vanellus: '@github.com/kiebitz-oss/vanellus/releases/download/v0.0.1/vanellus-0.0.1.tgz'
+      nanoid: 3.1.30
+      vanellus: '@github.com/kiebitz-oss/vanellus-inoeg/releases/download/v0.6.0/vanellus-0.6.0.tgz_buffer@6.0.3'
     devDependencies:
       '@types/jest': 27.4.0
       jest: 27.4.5
@@ -5188,7 +5192,7 @@ packages:
       '@storybook/client-api': 6.4.9_react-dom@17.0.2+react@17.0.2
       '@storybook/csf': 0.0.2--canary.87bc651.0
       '@storybook/preview-web': 6.4.9_react-dom@17.0.2+react@17.0.2
-      '@storybook/react': 6.4.9_3a18fd964db6d505ceaca79ed0eea253
+      '@storybook/react': 6.4.9_faf050fdbf0dc67de8b7e0bbbac531e7
       react: 17.0.2
     dev: true
 
@@ -17850,8 +17854,14 @@ packages:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
     dev: true
 
-  '@github.com/kiebitz-oss/vanellus/releases/download/v0.0.1/vanellus-0.0.1.tgz':
-    resolution: {tarball: https://github.com/kiebitz-oss/vanellus/releases/download/v0.0.1/vanellus-0.0.1.tgz}
+  '@github.com/kiebitz-oss/vanellus-inoeg/releases/download/v0.6.0/vanellus-0.6.0.tgz_buffer@6.0.3':
+    resolution: {tarball: https://github.com/kiebitz-oss/vanellus-inoeg/releases/download/v0.6.0/vanellus-0.6.0.tgz}
+    id: '@github.com/kiebitz-oss/vanellus-inoeg/releases/download/v0.6.0/vanellus-0.6.0.tgz'
     name: vanellus
-    version: 0.0.1
+    version: 0.6.0
+    peerDependencies:
+      buffer: ^6
+    dependencies:
+      buffer: 6.0.3
+      dayjs: 1.10.7
     dev: false
