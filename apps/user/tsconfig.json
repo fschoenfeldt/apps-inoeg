@@ -9,7 +9,10 @@
     "baseUrl": "src",
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo",
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "@kiebitz-oss/ui": ["../../packages/ui"]
+    }
   },
   "include": ["next-env.d.ts", "assets.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", ".next", "dist"]

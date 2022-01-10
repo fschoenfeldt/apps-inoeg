@@ -5,9 +5,7 @@
   "compilerOptions": {
     "lib": ["es2020", "DOM", "DOM.Iterable"],
     "incremental": true,
-    "tsBuildInfoFile": ".tsbuildinfo",
     "outDir": "dist",
-    "baseUrl": "src",
     "jsx": "react-jsx"
   },
   "include": ["assets.d.ts", "**/*.ts", "**/*.tsx"],

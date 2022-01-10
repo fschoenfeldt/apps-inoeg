@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  apps:
+    build: .
+    image: "apps-inoeg:main"
+    environment:
+      - NEXT_PUBLIC_STORAGE_ENDPOINT=http://localhost:11111/jsonrpc
+      - NEXT_PUBLIC_APPOINTMENT_ENDPOINT=http://localhost:22222/jsonrpc
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+
+  backend:
+    image: "ghcr.io/kiebitz-oss/services-inoeg:main"
+    depends_on:
+      - redis
+    environment:
+      - KIEBITZ_SETTINGS=/settings/test
+    volumes:
+      - "./tests/fixtures/keys:/settings/test"
+    ports:
+      - 11111:11111
+      - 22222:22222
+
+  redis:
+    image: "redis"

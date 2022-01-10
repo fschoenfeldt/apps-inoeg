@@ -8,22 +8,31 @@ Welcome to the Kiebitz project! Please visit our [website](https://kiebitz.eu) t
 
 Kiebietz consists of three apps for providers, mediators and users, which can be found under `/apps/provider`, `/apps/mediator` and `/apps/user`, respectively.
 
-After running `yarn install`, you can simply run `yarn dev:user`, `yarn dev:mediator` or `yarn dev:provider` to reach the respective app under `https://localhost:3000/`,
+After running `pnpm install`, you can simply run `pnpm dev:user`, `pnpm dev:mediator` or `pnpm dev:provider` to reach the respective app under `https://localhost:3000/`,
 
 To build the `production` versions simply run
 
 ```bash
-yarn build
+pnpm build
 ```
 
 # Apps
 
-The code is organized as a yarn-monorepo and consists of the 3 apps under `/apps/*` and supporting packages, which live inside `/packages/*`.
+The code is organized as a pnpm-monorepo and consists of the 3 apps under `/apps/*` and supporting packages, which live inside `/packages/*`.
 The three indiependant apps are built on top of [NextJS](https://nextjs.org/) and are exported as static html into the `/apps/*/dist`-folder. They can simply be served via a static html-server.
+
+# Docker
+
+To build the integrated docker-container for all apps, simply run `pnpm docker:build` (while having docker/docker-desktop installed) and `pnpm docker` to run. All apps are built as static html/js and deployed to a tiny, single `nginx`-container to run from.
 
 # UI
 
 The UI lives inside `/packages/ui`, is built with [TailwindCSS](https://tailwindcss.com/) and a storybook can be found inside `/packages/storybook`.
+
+# Translations
+
+For translation management we use [Weblate](https://hosted.weblate.org).  
+If you would like to lend a hand, feel free to do so at https://hosted.weblate.org/projects/kiebitz/
 
 # Testing
 
@@ -31,7 +40,7 @@ We are using `jest` for testing of the code. To test the code, simply run
 
 ```bash
 # just test
-yarn test
+pnpm test
 ```
 
 # Linting & Formatting
@@ -40,10 +49,10 @@ We use `eslint` for linting and formatting of code. To lint code, run
 
 ```bash
 # just lint
-yarn lint
+pnpm lint
 
 # lint and autofix where possible
-yarn lint --fix
+pnpm lint --fix
 ```
 
 # Licenses

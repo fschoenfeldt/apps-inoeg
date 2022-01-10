@@ -3,8 +3,8 @@
 // README.md contains license information.
 
 import { Buffer } from "buffer";
-import { appointments } from "fixtures";
 import { randomBytes } from "vanellus";
+import { appointments } from "../fixtures";
 import { providers } from "../fixtures/providers";
 import type { Appointment, PublicProvider } from "../types";
 import { ApiAdapter } from "./ApiAdapter";

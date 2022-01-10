@@ -2,15 +2,15 @@
 // Copyright (C) 2021-2021 The Kiebitz Authors
 // README.md contains license information.
 
+import { b642buf, Provider as KiebitzProvider, randomBytes } from "vanellus";
+import { getBackendInstance } from "./backend";
+import { appointments } from "./fixtures/appointments";
 import type {
   Appointment,
   Provider,
   ProviderKeyPair,
   ProviderSecretData,
-} from "types";
-import { b642buf, Provider as KiebitzProvider, randomBytes } from "vanellus";
-import { getBackendInstance } from "./backend";
-import { appointments } from "./fixtures/appointments";
+} from "./types";
 import { buf2base32 } from "./utils/crypto";
 
 export class ProviderApi {

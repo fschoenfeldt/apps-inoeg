@@ -15,7 +15,10 @@ msgstr ""
 
 #: pages/onboarding/DataSecret.tsx:12
 msgid "common.data-secret.text"
-msgstr "Please carefully write down your data key! You need it to log in on another device (PC, tablet, smartphone, etc.) or to access your appointments on another terminal."
+msgstr ""
+"Please carefully write down your data key! You need it to log in on another "
+"device (PC, tablet, smartphone, etc.) or to access your appointments on "
+"another terminal."
 
 #: components/NavContent.tsx:29
 msgid "common.footer.link.booking"
@@ -67,7 +70,10 @@ msgstr "Download appointment-file"
 
 #: pages/logout.page.tsx:61
 msgid "provider.logout.intro"
-msgstr "Do you really want to log out? Please make sure that you have written down your data key and downloaded your appointment-file. You can only log in again with both of them together."
+msgstr ""
+"Do you really want to log out? Please make sure that you have written down "
+"your data key and downloaded your appointment-file. You can only log in "
+"again with both of them together."
 
 #: pages/logout.page.tsx:57
 msgid "provider.logout.notice.logging-out"
@@ -99,7 +105,9 @@ msgstr "Place"
 
 #: pages/onboarding/DataStep.tsx:170
 msgid "provider.onboarding.data-description"
-msgstr "The following contact details are used exclusively for communication with the support team."
+msgstr ""
+"The following contact details are used exclusively for communication with "
+"the support team."
 
 #: pages/onboarding/DataStep.tsx:164
 msgid "provider.onboarding.data-title"
@@ -107,7 +115,9 @@ msgstr "Contact details"
 
 #: pages/onboarding/DataStep.tsx:152
 msgid "provider.onboarding.description.description"
-msgstr "Information for (potential) vaccinees (e.g. if you recommend specific vaccines only to certain groups)."
+msgstr ""
+"Information for (potential) vaccinees (e.g. if you recommend specific "
+"vaccines only to certain groups)."
 
 #: pages/onboarding/DataStep.tsx:148
 msgid "provider.onboarding.description.title"
@@ -155,7 +165,11 @@ msgstr "Finalise & go to scheduling"
 
 #: pages/onboarding/SecretStep.tsx:30
 msgid "provider.onboarding.secret.notice"
-msgstr "To log in again and access your appointments you will need both your data key and the downloaded appointment file. Please make sure that you have written down your data key and downloaded your appointment-file. You can only log in again with both of them together."
+msgstr ""
+"To log in again and access your appointments you will need both your data "
+"key and the downloaded appointment file. Please make sure that you have "
+"written down your data key and downloaded your appointment-file. You can "
+"only log in again with both of them together."
 
 #: pages/onboarding/DataStep.tsx:212
 msgid "provider.onboarding.settings-description"
@@ -221,16 +235,16 @@ msgstr "E-mail address"
 msgid "provider.provider-data.name"
 msgstr "Full name"
 
-#: pages/ProviderDataSummary.tsx:77
-#: pages/ProviderDataSummary.tsx:90
-#: pages/ProviderDataSummary.tsx:101
-#: pages/ProviderDataSummary.tsx:112
+#: pages/ProviderDataSummary.tsx:77 pages/ProviderDataSummary.tsx:90
+#: pages/ProviderDataSummary.tsx:101 pages/ProviderDataSummary.tsx:112
 msgid "provider.provider-data.not-given"
 msgstr "(No answer)"
 
 #: pages/ProviderDataSummary.tsx:30
 msgid "provider.provider-data.not-verified-yet"
-msgstr "Your data has not yet been verified. Please understand that verification can take up to 48h."
+msgstr ""
+"Your data has not yet been verified. Please understand that verification can "
+"take up to 48h."
 
 #: pages/ProviderDataSummary.tsx:41
 msgid "provider.provider-data.notice"
@@ -238,7 +252,7 @@ msgstr "Please check your data before you finalise the process."
 
 #: pages/ProviderDataSummary.tsx:97
 msgid "provider.provider-data.phone"
-msgstr "Phone"
+msgstr "Phone number"
 
 #: pages/ProviderDataSummary.tsx:58
 msgid "provider.provider-data.street"
@@ -254,7 +268,9 @@ msgstr "Postal code"
 
 #: pages/RestoreForm.tsx:135
 msgid "provider.restore-form.failed"
-msgstr "Loading of your data has failed. Please check your data key and the selected appointment-file."
+msgstr ""
+"Loading of your data has failed. Please check your data key and the selected "
+"appointment-file."
 
 #: pages/RestoreForm.tsx:169
 msgid "provider.restore-form.input"
@@ -262,7 +278,9 @@ msgstr "Select file"
 
 #: pages/RestoreForm.tsx:178
 msgid "provider.restore-form.input.description"
-msgstr "Please upload your appointment-file (vaccination-appointments-2022[Date&Time].enc)"
+msgstr ""
+"Please upload your appointment-file (vaccination-"
+"appointments-2022[Date&Time].enc)"
 
 #: pages/RestoreForm.tsx:97
 msgid "provider.restore-form.invalid-file"
@@ -332,8 +350,7 @@ msgstr "Time"
 msgid "provider.schedule.create.appointment-modal.vaccine-label"
 msgstr "Vaccine"
 
-#: pages/logout.page.tsx:71
-#: pages/onboarding/DataSecret.tsx:21
+#: pages/logout.page.tsx:71 pages/onboarding/DataSecret.tsx:21
 msgid "provider.secret.title"
 msgstr "Your data key"
 
@@ -343,10 +360,10 @@ msgstr "Settings"
 
 #: pages/index.page.tsx:23
 msgid "provider.welcome.loggedout-.notice"
-msgstr "You were successfully logged out. You can log in again anytime with your data key and your appointment-file."
+msgstr ""
+"You were successfully logged out. You can log in again anytime with your "
+"data key and your appointment-file."
 
 #: pages/index.page.tsx:18
 msgid "provider.welcome.title"
 msgstr "Vaccination sites"
-
-

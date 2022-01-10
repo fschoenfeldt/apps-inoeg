@@ -1,6 +1,7 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2021-12-17 20:33+0100\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,7 +100,7 @@ msgstr "Termine"
 
 #: pages/finder/DateStep.tsx:10
 msgid "user.finder.date.back-link"
-msgstr "zurück zum Terminauswahl"
+msgstr "Zurück zur Terminauswahl"
 
 #: pages/finder/DateStep.tsx:18
 msgid "user.finder.date.intro"
@@ -167,7 +168,7 @@ msgstr "Ihr Termin"
 
 #: pages/finder/VerifyStep.tsx:23
 msgid "user.finder.verify.back-link"
-msgstr "zurück zum Terminauswahl"
+msgstr "Zurück zur Terminauswahl"
 
 #: pages/finder/VerifyStep.tsx:33
 msgid "user.finder.verify.intro"
@@ -187,7 +188,11 @@ msgstr "Weiter zum Termin"
 
 #: pages/Questionair.tsx:135
 msgid "user.welcome.form_error"
-msgstr "Bitte beantworten Sie alle Fragen, denn sonst können wir keine Termine für Sie heraussuchen. Alle Ihre persönlichen Daten werden nur auf Ihrem Endgerät gespeichert und nicht an einen Server übermittelt oder weitergegeben."
+msgstr ""
+"Bitte beantworten Sie alle Fragen, weil wir sonst keine Termine für Sie "
+"heraussuchen können. Alle Ihre persönlichen Daten werden nur auf Ihrem "
+"Endgerät gespeichert und nicht an einen Server übermittelt oder "
+"weitergegeben."
 
 #: pages/index.page.tsx:23
 msgid "user.welcome.intro-1"
@@ -215,7 +220,10 @@ msgstr "Sind Sie jünger als 30 oder schwanger?"
 
 #: pages/Questionair.tsx:120
 msgid "user.welcome.question4_error"
-msgstr "Leider gibt es aktuell (noch) keine Termine für Kinderimpfungen über das Portal. Wir bemühen uns das Angebot schnellstmöglich zu erweitern und bitten bis dahin um Geduld."
+msgstr ""
+"Leider gibt es aktuell (noch) keine Termine für Kinderimpfungen über das "
+"Portal. Wir bemühen uns, das Angebot so schnell wie möglich zu erweitern. "
+"Bis dahin bitten wir um Geduld."
 
 #: pages/Questionair.tsx:126
 msgid "user.welcome.question4_value"

@@ -224,5 +224,3 @@ msgstr "Is the vaccinee younger than 12 years of age?"
 #: pages/index.page.tsx:19
 msgid "user.welcome.title"
 msgstr "Welcome!"
-
-

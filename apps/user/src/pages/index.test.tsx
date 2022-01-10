@@ -53,7 +53,7 @@ describe("IndexPage", () => {
     );
 
     expect(getByTestId("view.title")).toBeInTheDocument();
-    expect(getByText(container, "user.welcome.title")).toBeDefined();
+    expect(getByText(container, "Welcome!")).toBeDefined();
   });
 
   it("should not have a11y violations", async () => {

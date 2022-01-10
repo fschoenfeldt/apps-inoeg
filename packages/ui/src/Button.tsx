@@ -3,8 +3,8 @@
 // README.md contains license information.
 
 import clsx from "clsx";
-import { Size } from "types/Size";
-import { Variant } from "types/Variant";
+import { Size } from "./types/Size";
+import { Variant } from "./types/Variant";
 
 export interface ButtonProps extends React.ComponentProps<"button"> {
   variant?: Variant | "invalid";

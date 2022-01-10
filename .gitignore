@@ -23,7 +23,6 @@ locales/**/messages.js
 .tsbuildinfo
 .eslintcache
 .cache/*
-.ultra.cache.json
 __pycache__
 .turbo
 
@@ -37,9 +36,8 @@ __pycache__
 **/locales/**/messages.js
 
 # debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
 
 # local env files
 .env.local

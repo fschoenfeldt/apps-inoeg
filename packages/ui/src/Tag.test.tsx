@@ -2,17 +2,14 @@
 // Copyright (C) 2021-2021 The Kiebitz Authors
 // README.md contains license information.
 
-import { composeStories } from "@storybook/testing-react";
 import { render, screen } from "@testing-library/react";
-import * as stories from "./Tag.stories";
-
-const { Default } = composeStories(stories);
+import { Tag } from "./Tag";
 
 describe("ui/Tag", () => {
   it("should render", async () => {
     expect.hasAssertions();
 
-    render(<Default />);
+    render(<Tag>Tag</Tag>);
 
     const element = screen.getAllByText("Tag");
     expect(element).not.toBeNull();

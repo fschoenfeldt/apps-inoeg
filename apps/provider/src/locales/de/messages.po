@@ -15,7 +15,10 @@ msgstr ""
 
 #: pages/onboarding/DataSecret.tsx:12
 msgid "common.data-secret.text"
-msgstr "Bitte notieren Sie Ihren Datenschlüssel sorgfältig! Sie benötigen ihn, um sich auf einem anderen Gerät (PC, Tablet, Smartphone etc.) einzuloggen oder dort auf Ihre Termine zugreifen zu können."
+msgstr ""
+"Bitte notieren Sie Ihren Datenschlüssel sorgfältig! Sie benötigen ihn, um "
+"sich auf einem anderen Gerät (PC, Tablet, Smartphone etc.) einzuloggen oder "
+"dort auf Ihre Termine zugreifen zu können."
 
 #: components/NavContent.tsx:29
 msgid "common.footer.link.booking"
@@ -67,7 +70,10 @@ msgstr "Termin-Datei herunterladen"
 
 #: pages/logout.page.tsx:61
 msgid "provider.logout.intro"
-msgstr "Möchten Sie sich wirklich abmelden? Bitte stellen Sie sicher, dass Sie Ihren Datenschlüssel notiert und Ihre Termin-Datei heruntergeladen haben. Nur mit beidem zusammen können Sie sich erneut einloggen."
+msgstr ""
+"Möchten Sie sich wirklich abmelden? Bitte stellen Sie sicher, dass Sie Ihren "
+"Datenschlüssel notiert und Ihre Termin-Datei heruntergeladen haben. Nur mit "
+"beidem zusammen können Sie sich erneut einloggen."
 
 #: pages/logout.page.tsx:57
 msgid "provider.logout.notice.logging-out"
@@ -79,7 +85,9 @@ msgstr "Abmelden"
 
 #: pages/onboarding/DataStep.tsx:195
 msgid "provider.onboarding.access-code.description"
-msgstr "Falls Sie einen spezifischen Zugangscode erhalten haben, geben Sie ihn bitte hier ein."
+msgstr ""
+"Falls Sie einen spezifischen Zugangscode erhalten haben, geben Sie ihn bitte "
+"hier ein."
 
 #: pages/onboarding/DataStep.tsx:200
 msgid "provider.onboarding.access-code.label"
@@ -99,7 +107,9 @@ msgstr "Ort"
 
 #: pages/onboarding/DataStep.tsx:170
 msgid "provider.onboarding.data-description"
-msgstr "Die folgenden Kontaktdaten dienen ausschließlich zur Kommunikation mit dem Support-Team."
+msgstr ""
+"Die folgenden Kontaktdaten dienen ausschließlich zur Kommunikation mit dem "
+"Support-Team."
 
 #: pages/onboarding/DataStep.tsx:164
 msgid "provider.onboarding.data-title"
@@ -107,7 +117,9 @@ msgstr "Kontaktdaten"
 
 #: pages/onboarding/DataStep.tsx:152
 msgid "provider.onboarding.description.description"
-msgstr "Informationen für Impfwillige (z.B. wenn Sie einen Impfstoff nur bestimmten Gruppen empfehlen)"
+msgstr ""
+"Informationen für Impfwillige (z.B. wenn Sie einen Impfstoff nur bestimmten "
+"Gruppen empfehlen)"
 
 #: pages/onboarding/DataStep.tsx:148
 msgid "provider.onboarding.description.title"
@@ -155,7 +167,11 @@ msgstr "Abschließen & zur Terminplanung"
 
 #: pages/onboarding/SecretStep.tsx:30
 msgid "provider.onboarding.secret.notice"
-msgstr "Um sich später wieder einzuloggen bzw. auf Ihre Termine zugreifen zu können, benötigen Sie Ihre heruntergeladene Termin-Datei und Ihren Datenschlüssel. Bitte laden Sie jetzt Ihre Termin-Datei herunter und notieren Sie sich im Anschluss den Datenschlüssel."
+msgstr ""
+"Um sich später wieder einzuloggen bzw. auf Ihre Termine zugreifen zu können, "
+"benötigen Sie Ihre heruntergeladene Termin-Datei und Ihren Datenschlüssel. "
+"Bitte laden Sie jetzt Ihre Termin-Datei herunter und notieren Sie sich im "
+"Anschluss den Datenschlüssel."
 
 #: pages/onboarding/DataStep.tsx:212
 msgid "provider.onboarding.settings-description"
@@ -221,16 +237,16 @@ msgstr "E-Mail-Adresse"
 msgid "provider.provider-data.name"
 msgstr "Vollständiger Name"
 
-#: pages/ProviderDataSummary.tsx:77
-#: pages/ProviderDataSummary.tsx:90
-#: pages/ProviderDataSummary.tsx:101
-#: pages/ProviderDataSummary.tsx:112
+#: pages/ProviderDataSummary.tsx:77 pages/ProviderDataSummary.tsx:90
+#: pages/ProviderDataSummary.tsx:101 pages/ProviderDataSummary.tsx:112
 msgid "provider.provider-data.not-given"
 msgstr "(keine Angabe)"
 
 #: pages/ProviderDataSummary.tsx:30
 msgid "provider.provider-data.not-verified-yet"
-msgstr "Ihre Daten wurden noch nicht verifiziert. Bitte haben Sie Verständnis, dass die Verifizierung bis zu 48h dauern kann."
+msgstr ""
+"Ihre Daten wurden noch nicht verifiziert. Bitte haben Sie Verständnis, dass "
+"die Verifizierung bis zu 48h dauern kann."
 
 #: pages/ProviderDataSummary.tsx:41
 msgid "provider.provider-data.notice"
@@ -254,7 +270,9 @@ msgstr "Postleitzahl"
 
 #: pages/RestoreForm.tsx:135
 msgid "provider.restore-form.failed"
-msgstr "Das Laden Ihrer Daten ist leider fehlgeschlagen. Bitte prüfen Sie Ihren Datenschlüssel sowie die ausgewählte Termin-Datei."
+msgstr ""
+"Das Laden Ihrer Daten ist leider fehlgeschlagen. Bitte prüfen Sie Ihren "
+"Datenschlüssel sowie die ausgewählte Termin-Datei."
 
 #: pages/RestoreForm.tsx:169
 msgid "provider.restore-form.input"
@@ -262,7 +280,9 @@ msgstr "Termin-Datei wählen"
 
 #: pages/RestoreForm.tsx:178
 msgid "provider.restore-form.input.description"
-msgstr "Bitte laden Sie hier Ihre Termin-Datei (Impftermine-2022[Datum&Uhrzeit].enc) hoch."
+msgstr ""
+"Bitte laden Sie hier Ihre Termin-Datei (Impftermine-2022[Datum&Uhrzeit].enc) "
+"hoch."
 
 #: pages/RestoreForm.tsx:97
 msgid "provider.restore-form.invalid-file"
@@ -332,8 +352,7 @@ msgstr "Uhrzeit"
 msgid "provider.schedule.create.appointment-modal.vaccine-label"
 msgstr "Impfstoff"
 
-#: pages/logout.page.tsx:71
-#: pages/onboarding/DataSecret.tsx:21
+#: pages/logout.page.tsx:71 pages/onboarding/DataSecret.tsx:21
 msgid "provider.secret.title"
 msgstr "Ihr Datenschlüssel"
 
@@ -343,7 +362,9 @@ msgstr "Einstellungen"
 
 #: pages/index.page.tsx:23
 msgid "provider.welcome.loggedout-.notice"
-msgstr "Sie wurden erfolgreich abgemeldet. Sie können Ihre Daten jederzeit mit Ihrem Datenschlüssel und Ihrer Termin-Datei wiederherstellen."
+msgstr ""
+"Sie wurden erfolgreich abgemeldet. Sie können Ihre Daten jederzeit mit Ihrem "
+"Datenschlüssel und Ihrer Termin-Datei wiederherstellen."
 
 #: pages/index.page.tsx:18
 msgid "provider.welcome.title"

@@ -6,117 +6,58 @@
   "private": true,
   "license": "AGPL-3.0-or-later",
   "type": "module",
-  "source": "src/index.ts",
-  "module": "dist/index.js",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.ts",
+  "main": "src/index.ts",
   "sideEffects": false,
-  "files": [
-    "dist/**"
-  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kiebitz-oss/apps-ffm",
+    "url": "https://github.com/kiebitz-oss/apps-inoeg",
     "directory": "packages/ui"
   },
-  "bugs": "https://github.com/kiebitz-oss/apps-ffm/issues",
+  "bugs": "https://github.com/kiebitz-oss/apps-inoeg/issues",
   "engines": {
-    "node": "^14.18.1 || >=16.0.0",
-    "yarn": ">=1.22.0",
-    "npm": "please-use-yarn"
+    "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup -watch",
-    "clean": "rimraf --no-glob ./dist .tsbuildinfo .ultra.cache.json",
-    "test": "jest --passWithNoTests",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
-    "lint:staged": "lint-staged --allow-empty",
+    "test": "jest",
     "typecheck": "tsc --noEmit"
   },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@types/jest": "^27.0.3",
-    "@types/react": "^17.0.37",
-    "@types/react-dom": "^17.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
-    "@typescript-eslint/parser": "^5.8.0",
-    "cls": "^0.1.5",
-    "cross-env": "^7.0.3",
-    "eslint": "^8.5.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jest": "^25.3.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.27.1",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-regexp": "^1.5.1",
-    "eslint-plugin-storybook": "^0.5.5",
-    "eslint-plugin-testing-library": "^5.0.1",
-    "jest": "^27.4.5",
-    "lint-staged": "^12.1.3",
-    "microbundle": "^0.14.2",
-    "next": "^12.0.7",
-    "prettier": "^2.5.1",
+  "dependencies": {
+    "@babel/core": "^7.16.5",
+    "@headlessui/react": "^1.4.2",
+    "clsx": "^1.1.1",
+    "next": "^12",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.22.4",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^27.1.2",
-    "tsup": "^5.11.7",
+    "react-hook-form": "^7",
+    "react-use": "^17.3.2",
     "typescript": "^4.5.4"
   },
-  "peerDependencies": {
-    "clsx": "^1",
-    "next": "^12",
-    "react": "^17 || ^18.0.0-rc.0 || ^18.0.0",
-    "react-dom": "^17 || ^18.0.0-rc.0 || ^18.0.0",
-    "react-hook-form": "^7",
-    "react-use": "^17"
-  },
-  "peerDependenciesMeta": {
-    "react-use": {
-      "optional": false
-    },
-    "react": {
-      "optional": false
-    },
-    "react-dom": {
-      "optional": false
-    },
-    "react-hook-form": {
-      "optional": false
-    }
-  },
-  "tsup": {
-    "entry": [
-      "src/index.ts"
-    ],
-    "outDir": "dist",
-    "format": [
-      "esm",
-      "cjs"
-    ],
-    "dts": true,
-    "clean": true,
-    "minify": true,
-    "inject": [
-      "./react-shim.js"
-    ]
+  "devDependencies": {
+    "@storybook/addons": "^6.4.9",
+    "@storybook/client-api": "^6.4.9",
+    "@storybook/preview-web": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "@storybook/testing-react": "^1.2.2",
+    "@testing-library/dom": "^8.11.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "jest": "^27.4.7",
+    "jest-axe": "^5.0.1",
+    "ts-jest": "^27.1.2"
   },
   "browserslist": [
     "defaults",
     "not ie 11",
     "not op_mini all"
   ],
-  "lint-staged": {
-    "src/*": "yarn lint --fix"
-  },
   "jest": {
+    "displayName": "ui",
+    "roots": [
+      "<rootDir>"
+    ],
     "preset": "ts-jest",
     "testEnvironment": "jsdom",
-    "rootDir": "src",
-    "verbose": true,
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom",
       "@testing-library/jest-dom/extend-expect",
@@ -126,24 +67,5 @@
       "<rootDir>/node_modules/",
       "<rootDir>/dist/"
     ]
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "../../eslintrc.base.js",
-      "plugin:react/recommended",
-      "plugin:react-hooks/recommended",
-      "plugin:jsx-a11y/recommended"
-    ],
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
-    },
-    "rules": {
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "jsx-a11y/anchor-is-valid": "off"
-    }
   }
 }

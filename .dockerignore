@@ -5,6 +5,8 @@ node_modules
 
 Dockerfile*
 .dockerignore
-npm-debug.log
-yarn-error.log
 README.md
+.git
+.vscode
+.husky
+.github

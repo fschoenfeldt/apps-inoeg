@@ -6,8 +6,7 @@
     "lib": ["es2020", "DOM", "DOM.Iterable"],
     "incremental": true,
     "tsBuildInfoFile": ".tsbuildinfo",
-    "outDir": "dist",
-    "baseUrl": "src"
+    "outDir": "dist"
   },
   "include": ["assets.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["dist", "node_modules"]

@@ -304,5 +304,3 @@ msgstr "The backup-file you selected is invalid."
 #: pages/index.page.tsx:78
 msgid "mediator.welcome.upload-key-pairs.notice"
 msgstr "Please upload the backup-file with your secret mediator information."
-
-
